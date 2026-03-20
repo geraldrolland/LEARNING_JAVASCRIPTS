@@ -107,6 +107,7 @@ let myVariable; // declaring a variable without assigning a value
 console.log(myVariable); // Output: undefined
 
 /**
+ * create a file called javascript_data_types.js and answer the following questions:
  * 1. Variable Types Identification
 
 List three variables you would create to store:

@@ -33,7 +33,7 @@ if (score >= 90) {
 
 
 // switch statement
-let day = "Monday";
+let day = "myday";
 
 switch (day) {
     case "Monday":
@@ -60,3 +60,53 @@ switch (day) {
     default:
         console.log("Invalid day.");
 }
+
+/**
+ * 1)  Login System Simulation
+
+Simulate a login check using a username and password:
+
+If both username and password are correct → “Login successful”
+If either is incorrect → “Invalid credentials”
+2) Even or Odd Checker
+
+Ask the user for a number and determine whether it is even or odd.
+
+If the number is divisible by 2 → output “Even”
+Otherwise → output “Odd”
+3) Temperature Checker
+
+Ask the user for a temperature value:
+
+Above 30 → “Hot”
+Between 20 and 30 → “Warm”
+Below 20 → “Cold”
+4) Leap Year Checker
+
+Given a year, determine if it is a leap year:
+
+Divisible by 4 → Leap year
+But if divisible by 100 → Not a leap year
+Unless also divisible by 400 → Leap year
+5) Simple Calculator Decision
+
+Ask the user for two numbers and an operator (+, -, *, /):
+
+Perform the correct operation based on the operator
+If the operator is invalid → show an error message
+6) Traffic Light System
+
+Given a traffic light color:
+
+“Red” → Stop
+“Yellow” → Get Ready
+“Green” → Go
+Any other value → Invalid signal
+7) Discount Eligibility
+
+Ask for a user’s purchase amount:
+
+Above 100 → 20% discount
+Between 50 and 100 → 10% discount
+Below 50 → No discount
+ */

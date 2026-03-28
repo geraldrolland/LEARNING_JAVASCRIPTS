@@ -155,5 +155,20 @@ for (let i = 1; i <= rows; i++) {
 }
 
 /**
- * take questions: 
+ * task on loops create file called javascript_loops_task_2026_03_28.js: 1, 2, 4, 5, 6, 9
+ * task on conditionals create file called javascript_conditionals_task_2026_03_28.js:
+ * 1) Discount Eligibility
+Apply a discount if a purchase amount exceeds a certain value.
+Character Type Check
+Determine if a character is a vowel or consonant.
+Time Greeting
+Display greeting based on time (morning, afternoon, evening).
+Number Sign and Parity
+Check if a number is positive/negative and even/odd.
+Triangle Validity
+Check if three given sides can form a valid triangle
+Number Range Check
+Check if a number falls within a specific range (e.g., 10–50).
+Password Validation
+Verify if the entered password matches the correct one.
  */

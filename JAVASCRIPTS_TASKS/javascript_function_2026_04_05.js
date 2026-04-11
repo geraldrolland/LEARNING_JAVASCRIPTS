@@ -1,12 +1,12 @@
 //1
 function square(num) {
   return num * num;
-}
+} // correct
 
 //2
 function add(a, b) {
   return a + b;
-}
+} // correct
 
 //3
 function checkEvenOdd(num) {
@@ -15,12 +15,14 @@ function checkEvenOdd(num) {
   } else {
     return "Odd";
   }
-}
+} // correct
 
 //4
 function getLength(str) {
   return str.length;
-}
+} // correct
+
+
 
 //5
 function isPrime(num) {
@@ -33,4 +35,4 @@ function isPrime(num) {
   }
 
   return true;
-}
+} // correct

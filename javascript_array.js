@@ -217,4 +217,58 @@ const countries = ["USA", "Canada", "Mexico", "Brazil", "Argentina"];
 const slicedCountries = countries.slice(1, 3);
 console.log(slicedCountries)
 
+/**
+ * forEach() method: the forEach() method executes a provided function once for each array element.
+
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach((number) => {
+  console.log(number);
+});
+
+ */
+
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach((elem) => { // elem = 5
+  console.log(elem);
+})
+
+numbers.forEach((elem) => {
+  console.log(elem * 2);
+})
+
+
+
+// map() method: the map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+
+const squaredNumbers = numbers.map((elem) => { // [1, 4, 9, 16, 25]
+  return elem * elem;
+})
+
+console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+
+
+// reduce() method: the reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+
+previousValue = 0
+
+const sum = numbers.reduce((previousValue, currentValue) => {
+  return previousValue + currentValue;
+}, previousValue);
+
+console.log(sum); // Output: 15
+
+// filter() method: the filter() method creates a new array with all elements that pass the test implemented by the provided function.
+
+const evenNumbers = numbers.filter((elem) => {
+  return elem % 2 === 0;
+})
+console.log(evenNumbers); // Output: [2, 4]
+
+const divNumber = numbers.filter((elem) => {
+  return elem % 3 === 0;
+})
+
+console.log(divNumber); // Output: [3]
+
 

@@ -11,6 +11,7 @@ Reverse the elements of an array.
 Count how many times a specific value appears in an array.
 Combine two arrays into one.
 Remove duplicate values from an array.
+// weekly task
 🔴 Advanced Level
 Given an array of numbers, create a new array containing only even numbers.
 Transform an array of numbers into a new array where each value is doubled.

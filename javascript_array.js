@@ -272,3 +272,30 @@ const divNumber = numbers.filter((elem) => {
 console.log(divNumber); // Output: [3]
 
 
+// array destructuring: array destructuring is a syntax that allows you to unpack values from arrays, or properties from objects, into distinct variables.
+
+const state = ["Imo", "Enugu"] // i want to imo in a variable s1, and i want to store enugu in a variable s2
+
+// let s1 = state[0];
+// let s2 = state[1];
+
+
+const [s1, s2] = state; // array destructuring syntax
+
+console.log(s1)
+console.log(s2)
+
+
+// spread operator: the spread operator is a syntax that allows an iterable such as an array or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+
+const arr1 = [1, 2, 3];
+
+const arr2 = [...arr1, 4, 5]; // [1, 2, 3, 4, 5]
+
+console.log(arr2);
+
+function myFunc1(a, b) {
+  console.log(a, b)
+}
+
+myFunc1(...state)

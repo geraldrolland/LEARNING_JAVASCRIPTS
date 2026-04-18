@@ -46,7 +46,7 @@ console.log(removeDuplicates([1, 2, 2, 3, 4, 4])); // [1, 2, 3, 4]
 //1
 function getEvenNumbers(arr) {
   return arr.filter(num => num % 2 === 0);
-}
+} // correct
 
 // Example
 console.log(getEvenNumbers([1, 2, 3, 4, 5, 6]));
@@ -55,12 +55,14 @@ console.log(getEvenNumbers([1, 2, 3, 4, 5, 6]));
 //2
 function doubleNumbers(arr) {
   return arr.map(num => num * 2);
-}
+} // correct
 
 // Example
 console.log(doubleNumbers([1, 2, 3]));
 // [2, 4, 6]
 
+
+// [7, 2, 8, 1] => [2, 7, 1, 8] => [1, 2, 7, 8]
 //3
 function sortAscending(arr) {
   let result = [...arr]; // copy array
@@ -74,7 +76,8 @@ function sortAscending(arr) {
         result[j + 1] = temp;}}}
 
   return result;
-}
+} // correct
+
 
 // Example
 console.log(sortAscending([5, 2, 8, 1]));
@@ -91,7 +94,7 @@ function longestString(arr) {
   }
 
   return longest;
-}
+} // correct
 
 // Example
 console.log(longestString(["cat", "elephant", "dog"]));

@@ -1,18 +1,19 @@
 //6
-const Student = { name: "Abdul", age: 20, grade: "A" };
+const student = { name: "Abdul", age: 20, grade: "A" };
 
 for (let key in student) {
   console.log(key, ":", student[key]);
-}
+} // correct
 
 //7
-const Count = Object.keys(student).length;
+const count = Object.keys(student).length;
 console.log(count); // 3
-
+// correct
 //8
 console.log("name" in student); // true
 console.log(student.hasOwnProperty("age")); // true
 console.log("school" in student); // false
+// correct
 
 //9
 const student = {
@@ -25,6 +26,7 @@ const student = {
 };
 
 console.log(student.getInfo());
+// correct
 
 //10
 const products = [
@@ -35,16 +37,19 @@ const products = [
 
 //11
 console.log(products[1].price); // 800
+// correct
 
 //12
 products.sort((a, b) => a.price - b.price);
 console.log(products);
+// correct
 
 //13 
 const obj1 = { name: "Abdul", age: 20 };
 const obj2 = { age: 25, grade: "A" };
 
 const merged = { ...obj1, ...obj2 };
+// correct
 
 console.log(merged);
 // age becomes 25 (obj2 overrides obj1)
@@ -58,15 +63,14 @@ clone.age = 30;
 
 console.log(original.age); // 20 (unchanged)
 console.log(clone.age);    // 30
+// correct
 
 //15
-const ob = { a: 1, b: 2, c: 3 };
+const obj = { a: 1, b: 2, c: 3 };
 
 console.log(Object.keys(obj));
 console.log(Object.values(obj));
-
-console.log(keys);   // ["a", "b", "c"]
-console.log(values); // [1, 2, 3]
+// correct
 
 //16
 const sentence = "this is a test this is simple";
@@ -80,6 +84,7 @@ for (let word of words) {
 
 console.log (count);
 // { this: 2, is: 2, a: 1, test: 1, simple: 1 }
+// correct
 
 //17
 const obj = { name: "Abdul" };
@@ -89,6 +94,7 @@ Object.freeze(obj);
 obj.name = "Changed";
 
 console.log (obj.name); // still "Abdul"
+// correct
 
 //18
 function Student(name, age) {
@@ -100,6 +106,7 @@ const s1 = new Student("Abdul", 20);
 const s2 = new Student("Tunde", 22);
 
 console.log(s1, s2);
+// correct
 
 //19
 const students = [
@@ -118,6 +125,7 @@ students.forEach(s => {
 });
 
 console.log(grouped);
+// correct
 
 //20
 const obj = { a: 1, b: 2 };
@@ -127,3 +135,4 @@ console.log(entries); // [["a", 1], ["b", 2]]
 
 const backToObject = Object.fromEntries(entries);
 console.log(backToObject);
+// correct

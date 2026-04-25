@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+
+     -->
+
+     <img width="200" height="200" alt="">
+
+     <h1 id="header"></h1>
+
+     <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+     </ul>
+
+     <h2 class="myClass">this is h2</h2>
+     <h3 class="myClass">this is h3</h3>
+
+     <h4 class="myClass1" id="myH4">my H4</h4>
+    
+</body>
+<script>
+    const image = document.querySelector("img");
+    image.src = "./smile.jpg";
+    
+    const hAll = document.querySelectorAll(".myClass")
+    for (let elem of hAll) {
+        console.log(elem.innerHTML)
+    }
+
+    const h4 = document.querySelector("#myH4");
+    console.log(h4.innerHTML)
+    const myClass = document.getElementsByClassName("myClass");
+    for (let element of myClass) {
+        console.log(element.innerHTML);
+    }
+
+    const myItems = document.getElementsByTagName("li");
+    console.log(myItems);
+    for (let item of myItems) {
+        console.log(item.innerHTML);
+    }
+    const myHeader = document.getElementById("header");
+    myHeader.innerHTML = "hello world";
+</script>
+</html>

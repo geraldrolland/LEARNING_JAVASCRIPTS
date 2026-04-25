@@ -9,25 +9,30 @@ const student = {
 console.log(student.name);   // Abdul
 console.log(student.age);    // 20
 console.log(student.grade);  // A
+// correct
 
 //2
 student.school = "UI";  // University of Ibadan (example)
 
 console.log(student);
 // { name: "Abdul", age: 20, grade: "A", school: "UI" }
+// correct
 
 //3
 student.grade = "A+";
 
 console.log(student.grade); // A+
+// correct
 
 //4
 delete student.age;
 
 console.log(student.age); // undefined
+// correct
 
 // Check if property still exists
 console.log("age" in student); // false
+// correct
 
 //5
 const user = {
@@ -43,3 +48,4 @@ const user = {
 // Access nested values
 console.log(user.address.city);     // Ibadan
 console.log(user.address.country);  // Nigeria
+// correct

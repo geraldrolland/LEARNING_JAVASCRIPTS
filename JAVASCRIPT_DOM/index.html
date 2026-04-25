@@ -3,12 +3,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #bar-container {
+            width: 300px;
+            height: 30px;
+            background-color: lightgray;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        #needle {
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            position: absolute;
+            transform: translateX(-300px);
+            transition: transform 1s ease;
+        }
+    </style>
 </head>
 <body>
-    <!--
+     <!--
 
      -->
-
+<!-- 
+     <div onclick="changeColor()" style="width: 250px; height: 400px; background-color: red;"></div>
      <img width="200" height="200" alt="">
 
      <h1 id="header"></h1>
@@ -22,10 +42,69 @@
      <h2 class="myClass">this is h2</h2>
      <h3 class="myClass">this is h3</h3>
 
-     <h4 class="myClass1" id="myH4">my H4</h4>
+     <h4 class="myClass1" id="myH4">my H4</h4> -->
+     <!---form validation-->
+     <!-- <small id="error" style="color: red; display: none;">product name must filled out</small>
+     <input type="text" placeholder="search product here ..." id="search" style="width: 250px; height: 40px; border-radius: 4px; padding: 10px; font-size: 16px; box-sizing: border-box;">
+     <button onclick="searchProduct()" style="width: 60px; height: 30px; border-radius: 3px;">Search</button> -->
+
+     <!--form validation-->
+
+     <!-- <form action="">
+        <input type="text" required style="width: 150px; height: 30px;">
+        <input type="submit" name="search" value="search" id="">
+     </form>  -->
     
+    <!---progress bar animation-->
+    <div id="bar-container">
+        <div id="needle"></div>
+    </div>
 </body>
 <script>
+
+    const animateProgressBar = () => {
+        const needle = document.getElementById("needle");
+        let position = 300;
+        const interval = setInterval(() => {
+            if (position <= 0) {
+                clearInterval(interval);
+            } else {
+                position -= 10;
+                needle.style.transform = `translateX(-${position}px)`;
+            }
+        }, 100);
+    }
+
+    animateProgressBar();
+    const searchProduct = () => {
+        const searchInput = document.getElementById("search");
+        const errorMessage = document.getElementById("error");
+        if (searchInput.value.trim() === "") {
+            errorMessage.style.display = "block";
+        } else {
+            errorMessage.style.display = "none";
+            // Perform search operation here
+            console.log("Searching for:", searchInput.value);
+        }
+    }
+
+    const changeColor = () => {
+        const div = document.querySelector("div");
+        if (div.style.backgroundColor === "red") {
+            div.style.backgroundColor = "blue";
+        } else {
+            div.style.backgroundColor = "red";
+        }
+    }
+    // const div = document.querySelector("div");
+    // div.addEventListener("click", () => {
+    //     if (div.style.backgroundColor === "red") {
+    //         div.style.backgroundColor = "blue";
+    //     } else {
+    //         div.style.backgroundColor = "red";
+    //     }
+    // })
+    
     const image = document.querySelector("img");
     image.src = "./smile.jpg";
     

@@ -1,12 +1,52 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Image Changer</title>
 </head>
-<body>
-    <!--
+ <!--
     task description: create an image and button element in which the image element changes picture evrytime the button is clicked number of pictures is 8 
      -->
+<body style="text-align:center; font-family: Arial;">
+
+  <h2>Image Changer</h2>
+
+  <!-- IMAGE ELEMENT -->
+  <img id="image" src="https://picsum.photos/300?1" width="300">
+
+  <br><br>
+
+  <!-- BUTTON -->
+  <button onclick="changeImage()">Next Image</button>
+
+  <script>
+    // LIST OF 8 IMAGES
+    const images = [
+      "https://picsum.photos/300?1",
+      "https://picsum.photos/300?2",
+      "https://picsum.photos/300?3",
+      "https://picsum.photos/300?4",
+      "https://picsum.photos/300?5",
+      "https://picsum.photos/300?6",
+      "https://picsum.photos/300?7",
+      "https://picsum.photos/300?8"
+    ];
+
+    let index = 0;
+
+    function changeImage() {
+      index = index + 1;
+
+      // loop back to start
+      if (index >= images.length) {
+        index = 0;
+      }
+
+      document.getElementById("image").src = images[index];
+    }
+  </script>
+
 </body>
 </html>
+
+ 

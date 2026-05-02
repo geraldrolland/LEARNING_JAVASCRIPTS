@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            overflow: hidden;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        #menu-container {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            transition: left 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-container"></div>
+    <button id="menu-toggle">Toggle Menu</button>
+
+    <script>
+        const menuContainer = document.getElementById('menu-container');
+        const menuToggle = document.getElementById('menu-toggle');
+
+        menuToggle.addEventListener('click', () => {
+            if (menuContainer.style.left === '0px') {
+                menuContainer.style.left = '-250px';
+            } else {
+                menuContainer.style.left = '0px';
+            }
+        });
+    </script>
+</body>
+</html>

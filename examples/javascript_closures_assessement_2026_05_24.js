@@ -17,6 +17,7 @@ console.log(counter()); // 1
 console.log(counter()); // 2
 console.log(counter()); // 3
 
+// correct
 
 
 // 
@@ -50,6 +51,8 @@ game.increase(10);
 game.increase(5);
 game.decrease(3);
 game.reset();
+
+// correct
 
 
 
@@ -87,7 +90,7 @@ account.deposit(500);
 account.withdraw(200);
 account.checkBalance();
 
-
+// correct
 
 //
 // 4. Greeting Generator with Saved Language
@@ -120,3 +123,5 @@ const frenchGreeting = createGreeting("French");
 
 console.log(englishGreeting("John"));
 console.log(frenchGreeting("Marie"));
+
+// correct

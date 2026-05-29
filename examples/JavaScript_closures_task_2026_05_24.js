@@ -20,6 +20,8 @@ myCart.addProduct("Laptop");
 myCart.addProduct("Phone");
 myCart.viewCart();
 
+// correct
+
 
 // 7. Timer Utility
 function createTimer() {
@@ -40,6 +42,7 @@ setTimeout(() => {
     timer.elapsedTime();
 }, 3000);
 
+// correct
 
 // 8. Student Grade Manager
 function createGradeManager() {
@@ -67,6 +70,7 @@ student.addGrade(100);
 
 student.calculateAverage();
 
+// correct
 
 // 9. Notification System
 function createNotifier(template) {
@@ -80,6 +84,7 @@ const welcomeNotifier = createNotifier("Welcome");
 welcomeNotifier("John");
 welcomeNotifier("Sarah");
 
+// correct
 
 // 10. Function Factory (Multiplier Generator)
 function createMultiplier(multiplier) {
@@ -95,3 +100,5 @@ const quadruple = createMultiplier(4);
 console.log(double(5));      // 10
 console.log(triple(5));      // 15
 console.log(quadruple(5));   // 20
+
+// correct

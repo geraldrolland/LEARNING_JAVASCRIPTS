@@ -71,3 +71,79 @@ while (guess !== secretNumber) {
     guess++;
     console.log(`Trying: $(guess}`);
 }
+
+//Arrays & Objects
+
+//1. Products Above Certain Amount
+const Products = [
+    {name: "Laptop", Price: 1200 },
+    {name: "Mouse", Price: 60 },
+    {name: "Monitor", Price: 250 },
+    {name: "Keyboard", Price: 100 }
+];
+
+const expensiveProducts = Products.filter (Product => Product.Price > 100);
+console.log(expensiveProducts);
+
+//2. Student Management System 
+const students = [
+    {name: "john", age: 18, score:85 },
+    {name: "sarah", age: 19, score:92 },
+    {name: "chisom", age:20, score:78 },
+    {name: "Ayo", age:21, score:68 }
+];
+let topstudent = students[0];
+
+for (let student of students) {
+    if (student.score > topstudent.score){
+        topstudent = student;
+    }     
+}
+console.log(topstudent);
+
+//3. Shopping cart System
+const cart = [
+    {item: "shirt", Price: 30, quantity: 1 },
+    {item: "Shoe", price: 70, quantity: 2 },
+    {item: "Shorts", price: 20, quantity: 2},
+    {item: "socks", price: 20, quantity: 10}
+];
+let total = 0;
+for (let product of cart) {
+    total += product.price * product.quantity;
+}
+console.log('Total Price: $${total}');
+
+//4. Movie Collection App
+const movies = [
+    {tittle: "Avatar", genre: "scifi" },
+    {tittle: "Avengers", genre: "Action"},
+    {tittle: "Superman", genre: "Fantasy"},
+    {tittle:"The Batman", genre: "Thiller"}
+];
+function searchMovie(keyword) {
+    return movies.filler(movie => movie.title.toLowercase().includes(keyword.Lowercase()) ||
+    movie.genre.toLowercase().includes(keyword.toLowercase())
+);
+}
+console.log(searchMovie("Action"));
+console.log(searchMovie("titanic"));
+
+//5. Inventory Tracker
+const inventory = {
+    rice: 20,
+    beans: 15,
+    milk:10
+};
+
+function restock(item, amount) {
+    inventory[item] += amount;
+}
+function sell(item, amount) {
+    inventory[item] -= amount;
+}
+restock("rice", 5);
+sell("milk", 2);
+
+console.log(inventory);
+

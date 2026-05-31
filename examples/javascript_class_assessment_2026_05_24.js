@@ -18,6 +18,8 @@ function getGrade(score) {
 }
 console.log( getGrade(85));
 
+// correct
+
 //2 Simple Calculator
 function calculator(num1, num2, operator)
 {
@@ -30,10 +32,12 @@ function calculator(num1, num2, operator)
             return num1 * num2;
         case "/":
             return num2 !== 0 ? num1 / num2 : "Cannot be divided by 0";
-            default: 
+        default: 
             return "invalid operator";
         }           
 }
+// correct
+
 
 //3 Leap Year calender
 function isLeapYear(year) {
@@ -44,9 +48,11 @@ function isLeapYear(year) {
     }
 }
 
+// correct
+
 //4 Traffic Light Simulator
 function trafficLight(color) {
-    switch (color.toLowercase()) {
+    switch (color.toLowerCase()) {
         case "red":
             console.log("stop");
             break;
@@ -56,11 +62,13 @@ function trafficLight(color) {
         case "green":
             console.log("Go");
             break;
-            default:
-                console.log("invalid color");    
+        default:
+            console.log("invalid color");    
 
     }
 }
+
+// correct
 
 //5 Number Guessing Game
 
@@ -69,5 +77,7 @@ let guess = 0;
 
 while (guess !== secretNumber) {
     guess++;
-    console.log(`Trying: $(guess}`);
+    console.log(`Trying: ${guess}`);
 }
+
+// correct

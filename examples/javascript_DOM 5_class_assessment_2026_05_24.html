@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form onsubmit="return validateForm()">
+    <input type="text" id="name" placeholder="Enter name">
+    <br><br>
+
+    <input type="email" id="email" placeholder="Enter email">
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name === "" || email === "") {
+        alert("Please fill in all fields");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
+</script>
+
+</body>
+</html>

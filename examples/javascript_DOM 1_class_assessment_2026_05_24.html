@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM 1</title>
-</head>
+<html>
 <body>
-    <input type="text" id="taskInput"
-    placeholder="ENTER TASK">
-    <button onclick="addTask()">Add Task </button>
 
-    <ul id="taskList"></ul>
-    <script>
-        function addTask() {
-            let task = 
-            document.getElementById("taskInput").value;
+<input type="text" id="taskInput" placeholder="Enter task">
+<button onclick="addTask()">Add Task</button>
 
-            let li = document.createElement("li");
-            li.textContent = task;
-        }
-    </script>
+<ul id="taskList"></ul>
+
+<script>
+function addTask() {
+    let task = document.getElementById("taskInput").value;
+
+    let li = document.createElement("li");
+    li.textContent = task;
+
+    li.onclick = function () {
+        li.style.textDecoration = "line-through";
+    };
+
+    let deleteBtn = document.createElement("button");
+    deleteBtn.textContent = " Delete";
+
+    deleteBtn.onclick = function () {
+        li.remove();
+    };
+
+    li.appendChild(deleteBtn);
+    document.getElementById("taskList").appendChild(li);
+
+    document.getElementById("taskInput").value = "";
+}
+</script>
+
 </body>
 </html>

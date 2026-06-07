@@ -11,11 +11,7 @@ Reverse the elements of an array.
 Count how many times a specific value appears in an array.
 Combine two arrays into one.
 Remove duplicate values from an array.
-// weekly task
-🔴 Advanced Level
-Given an array of numbers, create a new array containing only even numbers.
-Transform an array of numbers into a new array where each value is doubled.
-Sort an array of numbers in ascending order without using the default sort behavior.
+git pfault sort behavior.
 Given an array of strings, find the longest string in the array.
  */
 

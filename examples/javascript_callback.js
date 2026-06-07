@@ -99,3 +99,72 @@ const filterArray = (array, callback) => {
 const isEven = (num) => num % 2 === 0;
 
 filterArray([1, 2, 3, 4, 5, 6], isEven);
+
+function calculator(num1, num2, callback) {
+    return callback(num1, num2);
+}
+
+// Callback functions
+function add(a, b) {
+    return a + b;
+}
+
+function subtract(a, b) {
+    return a - b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    return b !== 0 ? a / b : "Cannot divide by zero";
+}
+
+// Examples
+console.log(calculator(10, 5, add));       // 15
+console.log(calculator(10, 5, subtract));  // 5
+console.log(calculator(10, 5, multiply));  // 50
+console.log(calculator(10, 5, divide));    // 2
+
+function processArray(numbers, callback) {
+    const result = numbers.map(callback);
+    console.log(result);
+}
+
+// Callback functions
+function double(num) {
+    return num * 2;
+}
+
+function square(num) {
+    return num ** 2;
+}
+
+function addTen(num) {
+    return num + 10;
+}
+
+// Examples
+processArray([1, 2, 3, 4, 5], double);
+// Output: [2, 4, 6, 8, 10]
+
+processArray([1, 2, 3, 4, 5], square);
+// Output: [1, 4, 9, 16, 25]
+
+processArray([1, 2, 3, 4, 5], addTen);
+// Output: [11, 12, 13, 14, 15]
+
+function delayedMessage(callback) {
+    setTimeout(callback, 3000); // Waits 3 seconds
+}
+
+// Callback function
+function showMessage() {
+    console.log("Hello! This message appeared after 3 seconds.");
+}
+
+// Call the function
+delayedMessage(showMessage);
+
+

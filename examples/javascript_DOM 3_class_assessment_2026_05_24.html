@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="mainImage" src="https://picsum.photos/id/10/400/300" width="400">
+
+<br><br>
+
+<img src="https://picsum.photos/id/20/100/100"
+onclick="changeImage(this.src)">
+
+<img src="https://picsum.photos/id/30/100/100"
+onclick="changeImage(this.src)">
+
+<img src="https://picsum.photos/id/40/100/100"
+onclick="changeImage(this.src)">
+
+<script>
+function changeImage(src) {
+    document.getElementById("mainImage").src = src;
+}
+</script>
+
+</body>
+</html>

@@ -125,7 +125,7 @@ increment() // output: 3
 5) Build a number guessing game where the program keeps checking guesses until the correct number is found.
 
 Arrays & Objects
-1) Create an array of products and display only products that cost above a certain amount.
+1) Create an Arrays & Objects and display only products that cost above a certain amount.
 2) Build a student management system where each student object contains name, age, and score, then find the top-performing student.
 3) Create a shopping cart system that calculates the total price of all items in an array.
 4) Build a movie collection app where users can search movies by title or genre from an array of objects.

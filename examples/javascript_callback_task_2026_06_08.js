@@ -14,6 +14,7 @@ processCart(cart, function(items) {
     return items.reduce((sum, item) => sum + item.price, 0);
 });
 
+// correct
 
 //7
 function processResult(studentName, score, callback) {
@@ -24,6 +25,7 @@ function processResult(studentName, score, callback) {
 processResult("Abdulrahman", 75, function(name, result) {
     console.log(`Result sent to ${name}: ${result}`);
 });
+// correct
 
 
 //8
@@ -35,9 +37,10 @@ function uploadFile(fileName, callback) {
     }, 3000);
 }
 
-uploadFile("assignment.pdf", function(file, status) {
+uploadFile("assignment.pdf", (file, status) => {
     console.log(`${file}: ${status}`);
 });
+// correct
 
 
 //9
@@ -55,9 +58,10 @@ function trafficLight(callback) {
     }, 2000);
 }
 
-trafficLight(function() {
+trafficLight(() => {
     console.log("Traffic light cycle completed.");
 });
+// correct
 
 
 //10
@@ -74,8 +78,9 @@ function bookTicket(eventName, callback) {
     }, 2000);
 }
 
-bookTicket("Music Concert", function(ticket) {
+bookTicket("Music Concert", (ticket) => {
     console.log("Booking Confirmed!");
     console.log(`Event: ${ticket.event}`);
     console.log(`Ticket ID: ${ticket.ticketID}`);
 });
+// correct

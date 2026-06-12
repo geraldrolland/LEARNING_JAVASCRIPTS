@@ -7,7 +7,7 @@ function applyDiscount(price) {
     return price - (price * 0.10); // 10% discount
 }
 console.log(calculateDiscount(5000, applyDiscount));
-
+// correct
 
 //2
 function processSalary(salary, callback) {
@@ -18,7 +18,7 @@ function deductTax(salary) {
     return salary - (salary * 0.15); // 15% discount
 }
 console.log(processSalary(1000000000,deductTax));
-
+// correct
 
 //3
 function login(username, password, successCallback, failedCallback) {
@@ -42,7 +42,7 @@ function loginFailure() {
 
 login("admin", "1234", loginsuccess, loginFailure);
 login("user", "11111", loginsuccess, loginFailure);
-
+// correct
 
 //4
 function getAverage(ratings) {
@@ -59,3 +59,7 @@ function getLowest(ratings) {
 }
 const ratings = [4, 5, 3, 2, 6, 5]
 
+console.log("Average Rating:", getAverage(ratings));
+console.log("Highest Rating:", getHighest(ratings));
+console.log("Lowest Rating:", getLowest(ratings));
+// correct

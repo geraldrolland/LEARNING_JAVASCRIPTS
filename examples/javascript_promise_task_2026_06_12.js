@@ -21,7 +21,7 @@ fetchUserProfile
     .catch(error => {
         console.log("Error:", error);
     });
-
+// correct
 
 //2
 function processPayment(amount) {
@@ -41,7 +41,7 @@ processPayment(5000)
     .catch(error => {
         console.log(error);
     });
-    
+// correct
     
 //3
 function getUserID() {
@@ -83,7 +83,7 @@ getUserID()
     .catch(error => {
         console.log(error);
     });
-    
+// correct
     
 //4
 function checkInventory(quantity) {
@@ -105,7 +105,7 @@ checkInventory(5)
     .catch(error => {
         console.log(error);
     });
-    
+// correct
     
 //5
 const file1 = new Promise(resolve => {
@@ -127,4 +127,5 @@ Promise.all([file1, file2, file3])
     })
     .catch(error => {
         console.log("Download failed:", error);
-    });    
+    });
+// correct

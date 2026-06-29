@@ -33,7 +33,7 @@ car.displaySpeed();
 const bike = new Motorcycle("Yamaha", 60);
 bike.accelerate(15);
 bike.displaySpeed();
-
+// correct
 
 //2 School Members
 class Person {
@@ -60,6 +60,7 @@ teacher.teach("Mathematics");
 
 const student = new Student("Sarah", 18);
 student.study("Computer Science");
+// correct
 
 //Online Store Products
 class Product {
@@ -96,6 +97,7 @@ laptop.display();
 
 const shirt = new Clothing("T-Shirt", 25, "Large");
 shirt.display();
+// correct
 
 //Shape Calculator
 class Shape {
@@ -132,6 +134,7 @@ console.log("Circle Area:", circle.area());
 
 const rectangle = new Rectangle(8, 4);
 console.log("Rectangle Area:", rectangle.area());
+// correct
 
 //Company User Roles
 class User {
@@ -158,3 +161,4 @@ admin.manageUsers();
 
 const customer = new Customer("Mike", "mike@gmail.com");
 customer.placeOrder("Laptop");
+// correct

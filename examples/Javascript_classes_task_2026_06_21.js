@@ -12,9 +12,11 @@ class Person {
 // 
 const person1 = new Person("Abdul", 16);
 person1.introduce();
+// correct
 
 //2
 class BankAccount {
+
   constructor(owner, balance) {
     this.owner = owner;
     this.balance = balance;
@@ -35,52 +37,22 @@ class BankAccount {
   }
 
   checkBalance() {
-    console.log(`Current Balance: ₦${this.balance}`);
+    return this.balance
   }
 }
 
 //
 const account = new BankAccount("Abdul", 5000);
 
+console.log("this is the bank name ", BankAccount.getBankName())
 account.deposit(2000);
 account.withdraw(1500);
-account.checkBalance();
+console.log(account.checkBalance())
+// correct
+
+
 
 //3
-class BankAccount {
-  constructor(owner, balance) {
-    this.owner = owner;
-    this.balance = balance;
-  }
-
-  deposit(amount) {
-    this.balance += amount;
-    console.log(`Deposited ₦${amount}`);
-  }
-
-  withdraw(amount) {
-    if (amount <= this.balance) {
-      this.balance -= amount;
-      console.log(`Withdrew ₦${amount}`);
-    } else {
-      console.log("Insufficient funds.");
-    }
-  }
-
-  checkBalance() {
-    console.log(`Current Balance: ₦${this.balance}`);
-  }
-}
-
-// 
-const account = new BankAccount("Abdul", 5000);
-
-account.deposit(2000);
-account.withdraw(1500);
-account.checkBalance();
-
-
-//4
 class Student {
   constructor(name, course, score) {
     this.name = name;
@@ -103,6 +75,7 @@ student1.checkResult();
 
 const student2 = new Student("John", "Mathematics", 42);
 student2.checkResult();
+// correct 
 
 //5
 class LibraryBook {
@@ -143,3 +116,5 @@ book1.borrowBook();
 book1.checkStatus();
 book1.returnBook();
 book1.checkStatus();
+
+// correct

@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick="startWorker()">start time</button>
+    <button onclick="stopWorker()">stop time</button>
+</body>
+<script>
+    const display = document.getElementById("demo")
+    let worker;
+    const startWorker = () => {
+        worker = new Worker("./time_worker.js")
+        worker.postMessage("starting");
+        worker.onmessage = (event) => {
+            display.innerHTML = `${event.data.getHours()}:${event.data.getMinutes()}:${event.data.getSeconds()}`
+        }
+    }
+
+    const stopWorker = () => {
+        worker?.terminate()
+    }
+</script>
+</html>

@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+</body>
+<script>
+    const display = document.getElementById("demo")
+
+    const getLocation = () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                display.innerHTML = `the latitude is ${position.coords.latitude} and the longitude is ${position.coords.longitude}`;
+            })
+        } else {
+            alert("gps is disabled");
+        }
+    }
+
+    getLocation();
+</script>
+</html>

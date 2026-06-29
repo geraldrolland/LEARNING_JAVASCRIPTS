@@ -1,0 +1,85 @@
+JavaScript Web Workers Exercises (10)
+worker_file_name: prime_num_gen_worker.js, html file name: prime_num_gen.html
+1. Background Prime Number Generator
+
+Create a web page where the user enters a number. Use a Web Worker to calculate all prime numbers up to that number without freezing the UI. Display the results when the worker finishes.
+
+2. CSV Data Processing
+worker_file_name: csv_proccess_worker.js, html file name: csv_process.html
+Allow the user to upload a large CSV file. Send the file data to a Web Worker to count the total number of rows, columns, and empty cells. Display a summary after processing.
+
+3. Live Progress Calculator
+worker_file_name: progress_calc_worker.js, html file name: progress_calc.html
+Simulate processing one million records in a Web Worker. The worker should periodically send progress updates (e.g., every 10%) back to the main thread so a progress bar can be updated.
+
+4. Image Pixel Analysis
+worker_file_name: pixel_analysis_worker.js, html file name: pixel_analysis.html
+Given raw image pixel data, use a Web Worker to calculate the average RGB values, brightest pixel, and darkest pixel. Display the statistics once processing is complete.
+
+5. Word Frequency Counter
+worker_file_name: word_freq_counter_worker.js, html file name: word_freq_counter.html
+Allow the user to paste a large block of text. Send the text to a Web Worker to count how many times each word appears and return the ten most common words.
+
+6. Multiple Workers for Parallel Processing
+worker_file_names: worker1.js, worker2.js, worker3.js, worker4.js main_process.html 
+Split a large array of numbers into four equal parts. Use four Web Workers to calculate the sum of each section simultaneously, then combine the results in the main thread.
+
+7. Worker-Based Search
+worker_file_name: search_product_worker.js, html file name: search_product.html
+Load a dataset containing thousands of products. Whenever the user searches, send the search query and dataset to a Web Worker to find matching products while keeping the interface responsive.
+
+8. Cancel Long-Running Tasks
+worker_file_name: long_running_worker.js, html file name: long_running.html
+Create a Web Worker that simulates a long-running computation. Add a button that allows the user to terminate the worker before it completes and display an appropriate status message.
+
+9. Real-Time Data Sorting
+worker_file_name: realtime_datasort_worker.js, html file name: realtime_data.html
+Generate a large array of random numbers. Send it to a Web Worker to sort the data while the user can continue interacting with the page. Display the sorted result after completion.
+
+10. Background JSON Validation
+worker_file_name: json_validator_worker.js, html file name: json_validator.html
+Allow the user to paste a very large JSON document. Use a Web Worker to validate whether the JSON is valid and return either a success message or a detailed error message.
+
+JavaScript Modules Exercises (4)
+1. Student Management System
+
+Create separate modules for:
+
+Student data
+Student management functions (add, remove, update)
+Utility functions
+Main application
+
+Import the required modules to build a complete student management application.
+
+2. Shopping Cart Application
+
+Organize a shopping cart application into modules:
+
+Product module
+Cart module
+Pricing/discount module
+Checkout module
+
+Use imports and exports so each module performs a single responsibility.
+
+3. Weather Dashboard
+
+Create modules for:
+
+Fetching weather data
+Formatting weather information
+Displaying weather data in the UI
+
+The main module should coordinate the entire application using imported functionality.
+
+4. Banking System
+
+Build a banking application using JavaScript modules with separate files for:
+
+Account management
+Transaction processing
+Interest calculation
+Utility/helper functions
+
+The main module should import the necessary modules to perform operations such as deposits, withdrawals, transfers, and balance inquiries.

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Progress Calculator</title>
+    <script src="progress_calc_worker.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        progress {
+            width: 400px;
+            height: 25px;
+        }
+
+        #status {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Live Progress Calculator</h2>
+
+    <button id="startBtn">Start Processing</button>
+
+    <br><br>
+
+    <progress id="progressBar" value="0" max="100"></progress>
+
+    <p id="status">Waiting...</p>
+
+    <script>
+
+        const worker = new Worker("progress_calc_worker.js");
+
+        const progressBar = document.getElementById("progressBar");
+        const status = document.getElementById("status");
+        const startBtn = document.getElementById("startBtn");
+
+        startBtn.addEventListener("click", () => {
+
+            progressBar.value = 0;
+            status.textContent = "Processing...";
+
+            worker.postMessage("start");
+
+        });
+
+        worker.onmessage = function (e) {
+
+            const data = e.data;
+
+            if (data.type === "progress") {
+
+                progressBar.value = data.value;
+                status.textContent = `Processing: ${data.value}%`;
+
+            }
+
+            if (data.type === "complete") {
+
+                progressBar.value = 100;
+                status.textContent = "Processing Complete!";
+
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Pixel Analysis</title>
+<script src="pixel_analysis_worker.js"></script>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:30px;
+}
+
+canvas{
+    display:none;
+}
+
+#result{
+    margin-top:20px;
+    border:1px solid #ccc;
+    padding:15px;
+    width:350px;
+}
+</style>
+</head>
+<body>
+
+<h2>Image Pixel Analysis using Web Worker</h2>
+
+<input type="file" id="imageFile" accept="image/*">
+
+<br><br>
+
+<button id="analyzeBtn">Analyze Image</button>
+
+<canvas id="canvas"></canvas>
+
+<div id="result"></div>
+
+<script>
+
+const worker = new Worker("pixel_analysis_worker.js");
+
+const imageFile = document.getElementById("imageFile");
+const analyzeBtn = document.getElementById("analyzeBtn");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const result = document.getElementById("result");
+
+analyzeBtn.addEventListener("click", () => {
+
+    const file = imageFile.files[0];
+
+    if(!file){
+        alert("Please select an image.");
+        return;
+    }
+
+    const img = new Image();
+
+    img.onload = function(){
+
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        ctx.drawImage(img,0,0);
+
+        const imageData = ctx.getImageData(0,0,img.width,img.height);
+
+        result.innerHTML = "Analyzing image...";
+
+        worker.postMessage(imageData.data);
+
+    }
+
+    img.src = URL.createObjectURL(file);
+
+});
+
+worker.onmessage = function(e){
+
+    const data = e.data;
+
+    result.innerHTML = `
+        <h3>Analysis Complete</h3>
+
+        <p><strong>Average Red:</strong> ${data.avgR}</p>
+        <p><strong>Average Green:</strong> ${data.avgG}</p>
+        <p><strong>Average Blue:</strong> ${data.avgB}</p>
+
+        <p><strong>Brightest Pixel:</strong> ${data.brightest}</p>
+
+        <p><strong>Darkest Pixel:</strong> ${data.darkest}</p>
+    `;
+
+};
+
+</script>
+
+</body>
+</html>

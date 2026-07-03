@@ -11,7 +11,6 @@ async function greet() {
   const message = await delayedGreeting();
   console.log(message);
 }
-// correct
 
 greet();
 
@@ -37,7 +36,7 @@ async function displayUserProfile() {
 }
 
 displayUserProfile();
-// correct
+
 
 //3
 function login() {
@@ -64,7 +63,6 @@ async function attemptLogin() {
 }
 
 attemptLogin();
-// correct
 
 //4
 function getProfile() {
@@ -103,7 +101,6 @@ async function fetchUserData() {
 }
 
 fetchUserData();
-// correct
 
 //5
 function checkProductStock(productName) {
@@ -130,7 +127,6 @@ async function checkAvailability() {
 }
 
 checkAvailability();
-// correct
 
 //10
 function downloadFile(fileName) {
@@ -168,5 +164,3 @@ async function downloadAllFiles() {
 }
 
 downloadAllFiles();
-
-// correct

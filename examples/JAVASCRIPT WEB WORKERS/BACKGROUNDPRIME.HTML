@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #status {
+            margin-top: 15px;
+            color: blue;
+        }
+
+        #result {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Background Prime Number Generator</h2>
+
+    <input type="number" id="limit" placeholder="Enter a number">
+
+    <button id="generateBtn">Generate Primes</button>
+
+    <p id="status"></p>
+
+    <div id="result"></div>
+
+    <script>
+        const worker = new Worker("prime_num_gen_worker.js");
+
+        const limitInput = document.getElementById("limit");
+        const generateBtn = document.getElementById("generateBtn");
+        const status = document.getElementById("status");
+        const result = document.getElementById("result");
+
+        generateBtn.addEventListener("click", () => {
+
+            const limit = parseInt(limitInput.value);
+
+            if (isNaN(limit) || limit < 2) {
+                alert("Please enter a number greater than 1.");
+                return;
+            }
+
+            status.textContent = "Calculating prime numbers...";
+            result.textContent = "";
+
+            worker.postMessage(limit);
+
+        });
+
+        worker.onmessage = function(e) {
+
+            status.textContent = "Calculation Complete!";
+
+            result.textContent =
+                "Prime Numbers:\n\n" +
+                e.data.join(", ");
+        };
+    </script>
+
+</body>
+</html>

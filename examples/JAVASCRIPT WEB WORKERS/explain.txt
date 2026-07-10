@@ -1,0 +1,18 @@
+generate prime numbers  150
+limit = 150
+i = 1
+primeNum = []
+
+while i =< limit:
+  j = 1
+  while j =< i
+    if i % j == 0:
+        if i == j:
+           i is a prime number
+           push i into primeNum
+        else:
+           i is not a prime number
+        
+        break
+    
+    i++
